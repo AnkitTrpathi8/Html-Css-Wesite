@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ankit Tripathi</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* Container */
+.container {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Image styling */
+img {
+  width: 180px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Name */
+h1 {
+  font-size: 40px;
+  margin: 10px 0;
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle typing effect */
+.typing {
+  font-size: 20px;
+  border-right: 2px solid white;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 4s steps(30, end) forwards, blink 0.7s infinite;
+}
+
+/* Description */
+p {
+  opacity: 0.8;
+  margin-top: 15px;
+}
+
+/* Button */
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #00c6ff;
+  color: black;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 260px }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+/* Background bubbles */
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  animation: rise 10s infinite ease-in;
+}
+
+@keyframes rise {
+  0% { transform: translateY(0); opacity: 0; }
+  100% { transform: translateY(-120vh); opacity: 1; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="avatar">
+  
+  <h1>Ankit Tripathi</h1>
+  
+  <div class="typing">Innovator • Coder • Creator</div>
+  
+  <p>I build creative websites, games and ideas that stand out 🚀</p>
+  
+  <button class="btn">Contact Me</button>
+</div>
+
+<!-- Background bubbles -->
+<div class="bubble" style="left:10%; width:20px; height:20px;"></div>
+<div class="bubble" style="left:30%; width:30px; height:30px; animation-duration:12s;"></div>
+<div class="bubble" style="left:50%; width:25px; height:25px; animation-duration:8s;"></div>
+<div class="bubble" style="left:70%; width:35px; height:35px; animation-duration:15s;"></div>
+<div class="bubble" style="left:90%; width:15px; height:15px; animation-duration:10s;"></div>
+
+</body>
+</html>
